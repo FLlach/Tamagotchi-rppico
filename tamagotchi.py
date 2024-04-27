@@ -6,40 +6,42 @@ import threading
 
 # === clases === #
 class tamagotchi:
-    def __init__(self, nombre, felicidad, hambre, energia, tipo):
+    def __init__(self, nombre, felicidad, hambre, tipo, peso):
         self.nombre = nombre
         self.felicidad = felicidad
         self.hambre  = hambre
-        self.energia = energia
         self.tipo = tipo
+        self.peso = peso
 
     # Metodos de la clase
-    def dormir(self):
-        if self.energia <= 0:
-            time.sleep(60*1)
-            self.energia = 100
+    #def dormir(self):
+        #if self.energia <= 0:
+            #time.sleep(60*1)
+            #self.energia = 100
 
     def jugar(self):
         eleccion= input()
         pass
 
     def nombrar(self):
-        nombre=input("Ingrese un nombre: ")
+        nombre=input("Ingrese su nombre: ")
         self.nombre = nombre
-        return f"El nombre de tu tamagotchi es: {nombre}"
+        return f"Tu nombre es: {nombre}"
 
     def comer(self):
         pass
 
     def mostrar_estado(self):
-        print(f"Nombre: {self.nombre}\nFelicidad: {self.felicidad}\nHambre: {self.hambre}\nEnergía: {self.energia}\nTipo: {self.tipo}")
+        print(f"Nombre: {self.nombre}\nFelicidad: {self.felicidad}\nHambre: {self.hambre}\nPeso: {self.peso}\nTipo: {self.tipo}")
 
     def limpiar(self):
         pass
 
     def cagar(self):
         pass
-
+class bebe(tamagotchi):
+    def __init__(self)
+        
 # === Funciones === #
 def reloj(tiempo, fecha):
     while True:
@@ -86,6 +88,17 @@ def petsPref(pets, foods, drinks):
             pass
         elif name == "Felipoto":
             pass
+
+def cambioFecha():
+    day=input("Ingrese el día: ")
+    year = input("Ingrese el año: ")
+    month = input("Ingrese el mes (1-12): ")
+    return year, month, day
+
+def cambioHora(tiempo):
+    tiempo[1] = input("ingrese los minutos: ")
+    tiempo[0] = input("ingrese las horas: ")
+    return tiempo
 
             
 def main():
@@ -137,6 +150,8 @@ year =  2024
 month = 4
 day = 26
 fecha = datetime.date(year, month, day)
+year, month, day = cambioHora()
+
 
 # === Hilos ===#
 hiloReloj = threading.Thread(name= "hilo_principal", target= reloj, args=(tiempo, fecha) )
