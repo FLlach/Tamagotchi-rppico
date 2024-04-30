@@ -14,10 +14,8 @@ class tamagotchi:
         self.peso = peso
 
     # Metodos de la clase
-    #def dormir(self):
-        #if self.energia <= 0:
-            #time.sleep(60*1)
-            #self.energia = 100
+    def dormir(self):
+        pass
 
     def jugar(self):
         eleccion= input()
@@ -39,9 +37,24 @@ class tamagotchi:
 
     def cagar(self):
         pass
+
+class huevo(tamagotchi):
+    def __init__(self, nombre, felicidad, hambre, tipo, peso):
+        super().__init__(nombre, felicidad, hambre, tipo, peso)
+
 class bebe(tamagotchi):
-    def __init__(self)
+    def __init__(self, nombre, felicidad, hambre, tipo, peso):
+        super().__init__(nombre, felicidad, hambre, tipo, peso)
+
+class adolescente(tamagotchi):
+    def __init__(self, nombre, felicidad, hambre, tipo, peso):
+        super().__init__(nombre, felicidad, hambre, tipo, peso)
+
+class adulto(tamagotchi):
+    def __init__(self, nombre, felicidad, hambre, tipo, peso):
+        super().__init__(nombre, felicidad, hambre, tipo, peso)
         
+                
 # === Funciones === #
 def reloj(tiempo, fecha):
     while True:
@@ -90,7 +103,7 @@ def petsPref(pets, foods, drinks):
             pass
 
 def cambioFecha():
-    day=input("Ingrese el día: ")
+    day = input("Ingrese el día: ")
     year = input("Ingrese el año: ")
     month = input("Ingrese el mes (1-12): ")
     return year, month, day
@@ -104,6 +117,12 @@ def cambioHora(tiempo):
 def main():
     mascota=tamagotchi(None, 75, 50, 75, random.choice(pets))
     print ("Bienvenido a Tamagotchi!")
+    flag = True
+    while flag:
+        salir = input("s")
+        if salir == "s":
+            flag = False
+
 
 # === Variables globales === #
 pets=["Mametchi", "Kuchipatchi", "Lovelin", "Memetchi", "Kuromametchi", "Gozarutchi", "Chamametchi", "Happyhappytchi", "Uwasatchi", "Kikitchi", "Cherry", "Felipoto"]
@@ -150,13 +169,14 @@ year =  2024
 month = 4
 day = 26
 fecha = datetime.date(year, month, day)
-year, month, day = cambioHora()
+#year, month, day = cambioFecha()
 
 
 # === Hilos ===#
 hiloReloj = threading.Thread(name= "hilo_principal", target= reloj, args=(tiempo, fecha) )
 hiloMascota = threading.Thread(name= "hilo_mascota", target= main)
+hiloReloj.daemon = True
 
 # === Main === #
-#hiloReloj.start()
-#hiloMascota.start()
+hiloReloj.start()
+hiloMascota.start()
