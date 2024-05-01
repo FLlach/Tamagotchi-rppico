@@ -18,12 +18,19 @@
 
 
 ## Functions/Funciones
-cambioHora: Asigns an initial time to the system/Asigna una hora inicial al sistema
+-cambioHora: Asigns an initial time to the system/Asigna una hora inicial al sistema
 reloj: Receives a list with 3 values (hour, minutes and seconds) and starts a chronometer modifying the values of the list/Recibe una lista con 3 valores (horas, minutos, segundos) e inicia un cronometro modificando los valores de la lista 
-petsPref: Modifies certain values on the favorites food based on the preferences of the virtual pet/Modifica ciertos valores de las comidas preferidas por los diferentes tipos de mascotas digitales 
-cambioFecha: Asigns an initial date to the system/Asigna una fecha de inicio al sistema
-main: Main function where the main actions that the user can use execute/Función principal donde se ejecutan las principales acciones que puede usar el usuario
-menu: Deploys a menu with the actions that the user can do/Despliega un menu con las acciones que puede realizar el usuario
+
+
+-petsPref: Modifies certain values on the favorites food based on the preferences of the virtual pet/Modifica ciertos valores de las comidas preferidas por los diferentes tipos de mascotas digitales 
+
+
+-cambioFecha: Asigns an initial date to the system/Asigna una fecha de inicio al sistema
+
+
+-main: Main function where the main actions that the user can use execute/Función principal donde se ejecutan las principales acciones que puede usar el usuario
+
+-menu: Deploys a menu with the actions that the user can do/Despliega un menu con las acciones que puede realizar el usuario
 
 ## ClassMethods/MétodosDeClase
     ### User:
