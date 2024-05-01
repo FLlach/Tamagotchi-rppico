@@ -32,13 +32,13 @@
         -agregar_puntos: Adds tamapoint to the user's balance/Agrega tamapuntos al balance del usuario
     
     ### Tamagotchi: 
-        -dormir: Put the pet to sleep during a determined amount of time/Duerme a la mascota durante un tiempo determinado
-        -jugar: Deploys a menu with game options/Despliega un menu con opciones de juegos
-        -nombrar: Asigns a name to the virtual pet/Asigna un nombre a la mascota virtual
-        -comer: Deploys a menu where the user can choose to give to the virtual pet/Despliega un menu para elegir el tipo de comida que se le dará a la mascota virtual
-        -mostrar_estado: /Despliega las estadisticas actuales de la mascota virtual
-        -cagar: Adds a poop to the screen/Añade una caca a la pantalla
-        -limpiar: Clean the poop from the screen/Limpia la caca de la pantalla
+        dormir: Put the pet to sleep during a determined amount of time/Duerme a la mascota durante un tiempo determinado
+        jugar: Deploys a menu with game options/Despliega un menu con opciones de juegos
+        nombrar: Asigns a name to the virtual pet/Asigna un nombre a la mascota virtual
+        comer: Deploys a menu where the user can choose to give to the virtual pet/Despliega un menu para elegir el tipo de comida que se le dará a la mascota virtual
+        mostrar_estado: /Despliega las estadisticas actuales de la mascota virtual
+        cagar: Adds a poop to the screen/Añade una caca a la pantalla
+        limpiar: Clean the poop from the screen/Limpia la caca de la pantalla
         
 
 
