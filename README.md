@@ -24,7 +24,7 @@ Healthy weight for each stage/Peso sano para cada etapa:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna una hora inicial al sistema
 - `reloj`:
-- 
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Receives a list with 3 values (hour, minutes and seconds) and starts a &nbsp;&nbsp;&nbsp;&nbsp;chronometer modifying the values of the list
 
 &nbsp;&nbsp;&nbsp;&nbsp;Recibe una lista con 3 valores (horas, minutos, segundos) e inicia un cronometro &nbsp;&nbsp;&nbsp;&nbsp;modificando los valores de la lista 
@@ -74,26 +74,46 @@ Healthy weight for each stage/Peso sano para cada etapa:
 &nbsp;&nbsp;&nbsp;&nbsp;Agrega tamapuntos al balance del usuario
 
 ### Tamagotchi: 
-- `dormir`: 
+- `dormir`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Put the pet to sleep during a determined amount of time
+
 &nbsp;&nbsp;&nbsp;&nbsp;Duerme a la mascota durante un tiempo determinado
-- `jugar`: 
+
+- `jugar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys a menu with game options
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega un menu con opciones de juegos
-- `nombrar`: 
+
+- `nombrar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns a name to the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna un nombre a la mascota virtual
-- `comer`: 
+
+- `comer`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys a menu where the user can choose to give to the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega un menu para elegir el tipo de comida que se le dará a la mascota virtual
-- `mostrar_estado`: 
+
+- `mostrar_estado`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys the actual stats of the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega las estadisticas actuales de la mascota virtual
-- `cagar`: 
+
+- `cagar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Adds a poop to the screen
+
 &nbsp;&nbsp;&nbsp;&nbsp;Añade una caca a la pantalla
-- `limpiar`: 
+
+- `limpiar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Clean the poop from the screen
+
 &nbsp;&nbsp;&nbsp;&nbsp;Limpia la caca de la pantalla
         
 
