@@ -19,61 +19,101 @@ Healthy weight for each stage/Peso sano para cada etapa:
 
 ## Functions/Funciones
 - `cambioHora`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns an initial time to the system
+
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna una hora inicial al sistema
-- `reloj`: 
+- `reloj`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Receives a list with 3 values (hour, minutes and seconds) and starts a &nbsp;&nbsp;&nbsp;&nbsp;chronometer modifying the values of the list
+
 &nbsp;&nbsp;&nbsp;&nbsp;Recibe una lista con 3 valores (horas, minutos, segundos) e inicia un cronometro &nbsp;&nbsp;&nbsp;&nbsp;modificando los valores de la lista 
 
-- `petsPref`: 
+- `petsPref`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Modifies certain values on the favorites food based on the preferences of the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Modifica ciertos valores de las comidas preferidas por los diferentes tipos de mascotas digitales 
 
-- `cambioFecha`: 
+- `cambioFecha`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns an initial date to the system
+
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna una fecha de inicio al sistema
 
-- `main`: 
+- `main`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Main function where the main actions that the user can use execute
+
 &nbsp;&nbsp;&nbsp;&nbsp;Función principal donde se ejecutan las principales acciones que puede usar el usuario
 
-- `menu`: 
+- `menu`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys a menu with the actions that the user can do
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega un menu con las acciones que puede realizar el usuario
 
 ## ClassMethods/MétodosDeClase
 ### User:
-- `nombrar`: 
+- `nombrar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns a name to the user
+
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna un nombre al usuario
-- `edad_generacion`: 
+
+- `edad_generacion`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Adds one generation of virtual pets to the user
+
 &nbsp;&nbsp;&nbsp;&nbsp;Agrega una generación de mascotas al usuario
-- `agregar_puntos`: 
+
+- `agregar_puntos`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Adds tamapoint to the user's balance
+
 &nbsp;&nbsp;&nbsp;&nbsp;Agrega tamapuntos al balance del usuario
 
 ### Tamagotchi: 
-- `dormir`: 
+- `dormir`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Put the pet to sleep during a determined amount of time
+
 &nbsp;&nbsp;&nbsp;&nbsp;Duerme a la mascota durante un tiempo determinado
-- `jugar`: 
+
+- `jugar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys a menu with game options
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega un menu con opciones de juegos
-- `nombrar`: 
+
+- `nombrar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns a name to the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna un nombre a la mascota virtual
-- `comer`: 
+
+- `comer`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys a menu where the user can choose to give to the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega un menu para elegir el tipo de comida que se le dará a la mascota virtual
-- `mostrar_estado`: 
+
+- `mostrar_estado`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Deploys the actual stats of the virtual pet
+
 &nbsp;&nbsp;&nbsp;&nbsp;Despliega las estadisticas actuales de la mascota virtual
-- `cagar`: 
+
+- `cagar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Adds a poop to the screen
+
 &nbsp;&nbsp;&nbsp;&nbsp;Añade una caca a la pantalla
-- `limpiar`: 
+
+- `limpiar`:
+  
 &nbsp;&nbsp;&nbsp;&nbsp;Clean the poop from the screen
+
 &nbsp;&nbsp;&nbsp;&nbsp;Limpia la caca de la pantalla
         
 
