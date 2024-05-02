@@ -90,13 +90,151 @@ def reloj(tiempo, fecha):
             else:
                 fecha.replace(month=fecha.month+1)
 
-def petsPref(pets, foods, drinks):
-    for name in pets:
-        if name == "Mametchi":
-            foods["apple"]["felicidad"] = 3
-            drinks["water"]["felicidad"] = 2
-        elif name == "Kuchipatchi":
-            pass
+def petsPref(mascota, foods):
+        match mascota.tipo:
+            case "Teletchi":
+                foods["cupcake"]["felicidad"] = 3
+                foods["taco"]["felicidad"] = 3
+                foods["cupcake"]["felicidad"] = 3
+                foods["taco"]["felicidad"] = -1
+            case "Mizutamatchi":
+                foods["cherry"]["felicidad"] = 3
+                foods["hamburguer"]["felicidad"] = -1
+                foods["hamburguer"]["felicidad"] = -1
+            case "Tamatchi":
+                foods["french fries"]["felicidad"] = -1
+                foods["pineapple"]["felicidad"] = 3
+            case "Mohitamatchi":
+                foods["french fries"]["felicidad"] = -1
+                foods["pineapple"]["felicidad"] = 3
+            case "Kuchitamatchi":
+                foods["hamburguer"]["felicidad"] = -1
+                foods["cherry"]["felicidad"] = 3
+                foods["hamburguer"]["felicidad"] = -1
+            case "Young Mametchi":
+                foods["pizza"]["felicidad"] = -1
+                foods["sandwich"]["felicidad"] = 3
+            case "Obotchi":
+                foods["donut"]["felicidad"] = -1
+                foods["juice"]["felicidad"] = 3
+            case "Nikatchi":
+                foods["creamy cake"]["felicidad"] = -1
+                foods["drumstick"]["felicidad"] = 3
+            case "Pirorirotchi":
+                foods["french fries"]["felicidad"] = 3
+                foods["parfait"]["felicidad"] = -1
+            case "Hinatchi":
+                foods["pizza"]["felicidad"] = 3
+            case "Young Mimitchi":
+                foods["BBQ"]["felicidad"] = -1
+                foods["cheesecake"]["felicidad"] = 3
+            case "Hikotchi":
+                foods["drumstick"]["felicidad"] = -1
+                foods["milk"]["felicidad"] = 3
+            case "Hinotamatchi":
+                foods["donut"]["felicidad"] = -1
+                foods["omelette"]["felicidad"] = 3
+            case "Hashitamatchi":
+                foods["donut"]["felicidad"] = 3
+                foods["energy drink"]["felicidad"] = -1
+            case "Mametchi":
+                foods["bananas"]["felicidad"] = -1
+                foods["omelette"]["felicidad"] = 3
+            case "Violetchi":
+                foods["apple pie"]["felicidad"] = 3
+                foods["BBQ"]["felicidad"] = -1
+            case"Pyonkotchi":
+                foods["bananas"]["felicidad"] = 3
+                foods["cheese"]["felicidad"] = -1
+            case "Kuchipatchi":
+                foods["corn"]["felicidad"] = 3
+                foods["drumstick"]["felicidad"] = -1
+            case "Billotchi":
+                foods["juice"]["felicidad"] = -1
+                foods["sausage"]["felicidad"] = 3
+            case "Memetchi":
+                foods["cupcake"]["felicidad"] = 3
+                foods["fish"]["felicidad"] = -1
+            case "Tarakotchi":
+                foods["fish"]["felicidad"] = 3
+                foods["sandwich"]["felicidad"] = -1            
+            case "Paparatchi":
+                foods["cherry"]["felicidad"] = 3
+                foods["french fries"]["felicidad"] = 3
+            case "Mimiyoritchi":
+                foods["melon"]["felicidad"] = 3
+                foods["sausage"]["felicidad"] = -1
+            case "Tsunotchi":
+                foods["fish"]["felicidad"] = 3
+                foods["popcorn"]["felicidad"] = -1
+            case "Hashizoutchi":
+                foods["fish"]["felicidad"] = -1
+                foods["taco"]["felicidad"] = 3
+            case "Hanatchi":
+                foods["corn"]["felicidad"] = -1
+                foods["corn dog"]["felicidad"] = -1
+                foods["grapes"]["felicidad"] = 3
+            case "Megatchi":
+                foods["hot dog"]["felicidad"] = 3
+                foods["pineapple"]["felicidad"] = -1
+            case "Masktchi":
+                foods["hamburguer"]["felicidad"] = 3
+                foods["milk"]["felicidad"] = -1
+            case "Kurokotchi":
+                foods["bananas"]["felicidad"] = -1
+                foods["popcorn"]["felicidad"] = 3
+            case "ChoMametchi":
+                foods["french fries"]["felicidad"] = -1
+                foods["pasta"]["felicidad"] = 3
+            case "Decotchi":
+                foods["cheese"]["felicidad"] = 3
+                foods["corn"]["felicidad"] = -1
+            case "Mimitchi":
+                foods["hamburguer"]["felicidad"] = -1
+                foods["hamburguer"]["felicidad"] = -1
+                foods["icecream"]["felicidad"] = 3
+            case "Bunbuntchi":
+                foods["hot dog"]["felicidad"] = -1
+                foods["sausage"]["felicidad"] = 3
+            case "Debatchi":
+                foods["pasta"]["felicidad"] = -1
+                foods["pear"]["felicidad"] = 3
+            case "Hidatchi":
+                foods["drumstick"]["felicidad"] = 3
+                foods["icecream"]["felicidad"] = -1
+            case "Dorotchi":
+                foods["apple pie"]["felicidad"] = -1
+                foods["corn dog"]["felicidad"] = 3
+            case "Pipotchi":
+                foods["parfait"]["felicidad"] = 3
+                foods["sausage"]["felicidad"] = -1
+            case "Bill":
+                foods["beef bowl"]["felicidad"] = 3
+                foods["grapes"]["felicidad"] = -1
+            case "Androtchi":
+                foods["energy drink"]["felicidad"] = 3
+                foods["soda"]["felicidad"] = -1
+            case "Teketchi":
+                foods["apple pie"]["felicidad"] = -1
+                foods["soda"]["felicidad"] = 3
+            case "Wooltchi":
+                foods["apple pie"]["felicidad"] = 3
+                foods["omelette"]["felicidad"] = -1
+            case "Gozarutchi":
+                foods["cheesecake"]["felicidad"] = -1
+                foods["hot dog"]["felicidad"] = 3
+            case "Sekitoritchi":
+                foods["BBQ"]["felicidad"] = 3
+                foods["omelette"]["felicidad"] = -1
+            case "Warusotchi":
+                foods["pear"]["felicidad"] = -1
+                foods["taco"]["felicidad"] = 3
+            case "Ojitchi":
+                foods["creamy cake"]["felicidad"] = 3
+                foods["cupcake"]["felicidad"] = -1
+            case "Otokitchi":
+                foods["creamy cake"]["felicidad"] = 3
+                foods["cupcake"]["felicidad"] = -1
 
 def cambioFecha():
     day = input("Ingrese el día: ")
@@ -108,7 +246,6 @@ def cambioHora(tiempo):
     tiempo[1] = input("ingrese los minutos: ")
     tiempo[0] = input("ingrese las horas: ")
     return tiempo
-
             
 def main():
     usuario=user(None, 1, 0)
@@ -135,7 +272,7 @@ teen = [["Young Mametchi", "Batabatchi","Obotchi",["Nikatchi","Pirorirotchi"]],
         ["Hinatchi","Young Mimitchi","Hikotchi",["Hinotamatchi","Hashitamatchi"]]]
 
 adult= [["Mametchi","Violetchi","Pyonkotchi"],["Kuchipatchi","Billotchi","Memetchi"],["Tarakotchi","Paparatchi","Mimiyoritchi"],["Tsunotchi","Hashizoutchi","Hanatchi"],["Megatchi","Masktchi","Kurokotchi"]
-        ["ChoMamtechi","Decotchi","Mimitchi"],["Bunbuntchi","Debatchi","Hidatchi"],["Dorotchi","Pipotch","Bill"],["Androtchi","Teketchi","Wooltchi"],["Gozarutchi","Sekitoritchi","Warusotchi"]]
+        ["ChoMametchi","Decotchi","Mimitchi"],["Bunbuntchi","Debatchi","Hidatchi"],["Dorotchi","Pipotchi","Bill"],["Androtchi","Teketchi","Wooltchi"],["Gozarutchi","Sekitoritchi","Warusotchi"]]
 
 senior = ["Ojitchi","Otokitchi"]
 
@@ -185,7 +322,7 @@ foods = {"apple":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 0},
         "soda":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 120}, 
         "chocolate":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 150}, 
         "pasta":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 200}, 
-        "omelet":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 200}, 
+        "omelette":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 200}, 
         "drumstick":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 200}, 
         "popcorn":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 90}, 
         "fish":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 90}, 
