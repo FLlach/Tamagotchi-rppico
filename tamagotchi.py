@@ -3,6 +3,10 @@ import random
 import time
 import datetime
 import threading
+import pygame
+from pygame.locals import *
+import sys
+import os
 
 
 # === clases === #
@@ -58,7 +62,7 @@ class tamagotchi:
     def mostrar_estado(self):
         print(f"Nombre: {self.nombre}\nFelicidad: {self.felicidad}\nHambre: {self.hambre}\nTipo: {self.tipo}\nPeso: {self.peso}\nGenero: {self.genero}\nCare Mistakes: {self.mistakes}\nEnfermo: {self.enfermo}\nSalud: {self.salud}\nEdad: {self.edad}")
 
-    def cagar(self):
+    def defecar(self):
         if self.caca == False:
             self.caca = True
         else:
@@ -248,6 +252,8 @@ def cambioHora(tiempo):
     return tiempo
             
 def main():
+    fechaInicio = None
+    horaInicio = None 
     usuario=user(None, 1, 0)
     mascota=tamagotchi(None, 10, 75, random.choice(baby), 10, random.choice(genero), 0, False, 100, 0, etapa[0], False, False)
     print ("Bienvenido a Tamagotchi!")
@@ -264,22 +270,15 @@ def menu():
 
 # === Variables globales === #
 baby=["Teletchi"]
-
 child=[["Mizutamatchi","Tamatchi"],
        ["Mohitamatchi","Kuchitamatchi"]]
-
 teen = [["Young Mametchi", "Batabatchi","Obotchi",["Nikatchi","Pirorirotchi"]],
         ["Hinatchi","Young Mimitchi","Hikotchi",["Hinotamatchi","Hashitamatchi"]]]
-
-adult= [["Mametchi","Violetchi","Pyonkotchi"],["Kuchipatchi","Billotchi","Memetchi"],["Tarakotchi","Paparatchi","Mimiyoritchi"],["Tsunotchi","Hashizoutchi","Hanatchi"],["Megatchi","Masktchi","Kurokotchi"]
+adult= [["Mametchi","Violetchi","Pyonkotchi"],["Kuchipatchi","Billotchi","Memetchi"],["Tarakotchi","Paparatchi","Mimiyoritchi"],["Tsunotchi","Hashizoutchi","Hanatchi"],["Megatchi","Masktchi","Kurokotchi"],
         ["ChoMametchi","Decotchi","Mimitchi"],["Bunbuntchi","Debatchi","Hidatchi"],["Dorotchi","Pipotchi","Bill"],["Androtchi","Teketchi","Wooltchi"],["Gozarutchi","Sekitoritchi","Warusotchi"]]
-
 senior = ["Ojitchi","Otokitchi"]
-
 genero = ["Macho", "Hembra"]
-
 etapa = ["baby", "child", "teen", "adult", "senior"]
-
 foods = {"apple":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 0}, 
         "tart":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 0}, 
         "pudding":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 0}, 
@@ -331,7 +330,6 @@ foods = {"apple":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 0},
         "corn":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 80}, 
         "pear":{"calorias": 0, "cantidad": 0, "felicidad": 0, "precio": 70}
          }
-
 items = {"cuckoo clock":{"precio": 4000},
         "costume":{"precio": 2500},
         "building blocks":{"precio": 800},
@@ -361,7 +359,6 @@ items = {"cuckoo clock":{"precio": 4000},
         "ball":{"precio": 200},
         "shirt":{"precio": 1000}
         }
-
 tempItems = {"shovel":{"precio": 80},
             "plant":{"precio": 50},
             "chest":{"precio": 200},
@@ -376,20 +373,43 @@ tempItems = {"shovel":{"precio": 80},
             "darts":{"precio": 100}
             }
 
+screenWidth = 320
+screenHeight = 240
 tiempo = [0,0,0]
 year =  2024
 month = 4
 day = 26
 fecha = datetime.date(year, month, day)
+print(fecha)
 #year, month, day = cambioFecha()
 
 
-# === Hilos ===#
+# === Hilos === #
 hiloReloj = threading.Thread(name= "hilo_principal", target= reloj, args=(tiempo, fecha) )
 hiloMascota = threading.Thread(name= "hilo_mascota", target= main)
 hiloReloj.daemon = True
 
 
 # === Main === #
-hiloReloj.start()
-hiloMascota.start()
+#hiloReloj.start()
+#hiloMascota.start()
+
+# === Inicio PyGame === #
+pygame.init() 
+os.environ["SDL_VIDEO_WINDOWS_POS"] = "center"
+pygame.display.set_caption("Tamagotchi")
+screen = pygame.display.set_mode((screenWidth,screenHeight))
+screenbondx, screenboundy =  screen.get_size()
+clock = pygame.time.Clock()
+running = True
+
+while running:
+    # Loop de listeners # 
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    clock.tick(30)
+    screen.fill((0,0,0))
+    pygame.display.update()

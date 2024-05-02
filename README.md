@@ -6,14 +6,15 @@
 [MicroPython Documentation](http://docs.micropython.org/en/latest/index.html)
 [Raspberry Pi Pico Getting Started Guide](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)
 [Raspberry Pi Pico Datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf)
+[Tamagotchi Sprites](https://spritedatabase.net/game/1755)
 
 
 ## Utility/Utilidad
 Healthy weight for each stage/Peso sano para cada etapa:
-- Baby/bebé: Between 10 & 15 kg/Entre 10 y 15 kg
-- Child/Niño: Between 15 & 30 kg/Entre 15 y 30 kg
-- Teen/Adolescente: Between 30 & 40 kg/Entre 30 y 40 kg
-- Adult/Adulto: Between 40 & 5 kg/Entre 40 y 55 kg
+- Baby/bebé: Between 4 & 9 kg/Entre 4 y 9 kg
+- Child/Niño: Between 9 & 24 kg/Entre 9 y 24 kg
+- Teen/Adolescente: Between 24 & 40 kg/Entre 24 y 40 kg
+- Adult/Adulto: Between 40 & 60 kg/Entre 40 y 60 kg
 - Senior/Anciano: Between 40 & 55 kg/Entre 40 y 55 kg
 
 
@@ -23,6 +24,7 @@ Healthy weight for each stage/Peso sano para cada etapa:
 &nbsp;&nbsp;&nbsp;&nbsp;Asigns an initial time to the system
 
 &nbsp;&nbsp;&nbsp;&nbsp;Asigna una hora inicial al sistema
+
 - `reloj`:
   
 &nbsp;&nbsp;&nbsp;&nbsp;Receives a list with 3 values (hour, minutes and seconds) and starts a &nbsp;&nbsp;&nbsp;&nbsp;chronometer modifying the values of the list
